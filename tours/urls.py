@@ -1,9 +1,12 @@
 from django.urls import path, include
-from .views import ToursList
+from .views import *
 
 
 app_name = 'tours'
 urlpatterns = [
-    path('', ToursList.as_view(),name ='tours-list'),
+    path('', ToursListView.as_view(),name ='tours-list'),
+    path('<int:pk>/', ToursDetailView.as_view(),name ='tour-detail'),
+    
+    
     
 ]
