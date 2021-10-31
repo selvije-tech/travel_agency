@@ -6,6 +6,7 @@ app_name = 'tours'
 urlpatterns = [
     path('', ToursListView.as_view(),name ='tours-list'),
     path('<int:pk>/', ToursDetailView.as_view(),name ='tour-detail'),
+    path('<int:pk>/prenote', ToursPrenoteView.as_view(),name ='tour-prenote'),
     
     
     

@@ -18,3 +18,9 @@ class ToursDetailView(generic.DetailView):
     template_name = 'tour_detail.html'
     queryset = Trip.objects.all()
     context_object_name = 'trip'
+
+
+class ToursPrenoteView(generic.DetailView):
+    template_name = 'tour_prenote.html'
+    queryset = Trip.objects.all()
+    context_object_name = 'trip'

@@ -70,7 +70,7 @@ class Trip(models.Model):
     to_hotel = models.ForeignKey(Hotel, on_delete=models.CASCADE, related_name='to_hotel')
     to_airport = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name='to_airport')
     date_of_departure = models.DateTimeField()
-    date_of_retur = models.DateTimeField()
+    date_of_return = models.DateTimeField()
     number_of_days = models.IntegerField()
     type_of_accomodation = models.CharField(max_length=255,choices=ACCOMODATION_CHOICES)
     price_for_an_adult = models.DecimalField(max_digits=10, decimal_places=2)
